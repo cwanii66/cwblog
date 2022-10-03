@@ -12,9 +12,11 @@ import SVG from 'vite-svg-loader'
 export default defineConfig({
   plugins: [
     vue(),
-    Pages(),
+    Pages({
+      extensions: ['vue', 'md'],
+    }),
     UnoCSS(),
-    Markdown({}),
+    Markdown(),
     Inspect(),
     AutoImport(),
     Components(),

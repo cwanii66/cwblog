@@ -10,15 +10,16 @@
     "lint": "eslint . --ext .js,.vue,.html --fix"
   },
   "dependencies": {
+    "@vueuse/core": "^9.3.0",
+    "@vueuse/head": "^0.8.0",
     "dayjs": "^1.11.4",
+    "nprogress": "^0.2.0",
     "vite-ssg": "^0.20.2",
     "vue": "^3.2.37",
     "vue-router": "4.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
-    "@vueuse/core": "^9.3.0",
-    "@vueuse/head": "^0.7.12",
     "critters": "^0.0.16",
     "eslint": "^8.24.0",
     "fs-extra": "^10.1.0",
