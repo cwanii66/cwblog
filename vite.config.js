@@ -18,7 +18,14 @@ export default defineConfig({
     UnoCSS(),
     Markdown(),
     Inspect(),
-    AutoImport(),
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        '@vueuse/head',
+      ],
+    }),
     Components(),
     Icons({
       defaultClass: 'inline',

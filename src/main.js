@@ -6,6 +6,7 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import routes from "~pages";
 
 import 'uno.css';
+import './styles/main.css';
 
 export const createApp = ViteSSG(
   // the root component

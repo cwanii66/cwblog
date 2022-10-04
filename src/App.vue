@@ -1,5 +1,10 @@
 <script setup>
-
+useHead({
+  meta: [
+    { property: 'og:title', content: 'chriswong' },
+    { name: 'description', content: 'cw\'s blog world' },
+  ]
+})
 </script>
 
 <template>
