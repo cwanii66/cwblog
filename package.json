@@ -19,6 +19,7 @@
     "vue-router": "4.1.2"
   },
   "devDependencies": {
+    "@iconify/json": "^2.1.117",
     "@vitejs/plugin-vue": "^3.1.0",
     "critters": "^0.0.16",
     "eslint": "^8.24.0",

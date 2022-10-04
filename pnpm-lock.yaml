@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify/json': ^2.1.117
   '@vitejs/plugin-vue': ^3.1.0
   '@vueuse/core': ^9.3.0
   '@vueuse/head': ^0.8.0
@@ -33,6 +34,7 @@ dependencies:
   vue-router: 4.1.2_vue@3.2.40
 
 devDependencies:
+  '@iconify/json': 2.1.117
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.4+vue@3.2.40
   critters: 0.0.16
   eslint: 8.24.0
@@ -147,6 +149,13 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify/json/2.1.117:
+    resolution: {integrity: sha512-/09IuBTE/X10GHs2/rspqK5VfBypHi/aa2yvqWyOuybbQTjoOcPIoi/zg+s1HvloHynVr+Avxj3whtZ6CfesfA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 0.3.8
     dev: true
 
   /@iconify/types/2.0.0:
