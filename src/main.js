@@ -1,12 +1,13 @@
-import { ViteSSG } from "vite-ssg";
-import App from "./App.vue";
-import NProgress from 'nprogress';
-import dayjs from 'dayjs';
-import LocalizedFormat from 'dayjs/plugin/localizedFormat';
-import routes from "~pages";
+import { ViteSSG } from 'vite-ssg'
+import App from './App.vue'
+import NProgress from 'nprogress'
+import dayjs from 'dayjs'
+import LocalizedFormat from 'dayjs/plugin/localizedFormat'
+import routes from '~pages'
 
-import 'uno.css';
-import './styles/main.css';
+import 'uno.css'
+import './styles/main.css'
+import '@unocss/reset/tailwind.css'
 
 export const createApp = ViteSSG(
   // the root component
@@ -17,8 +18,12 @@ export const createApp = ViteSSG(
   ({ router, isClient }) => {
     dayjs.extend(LocalizedFormat)
     if (isClient) {
-      router.beforeEach(() => { NProgress.start() })
-      router.afterEach(() => { NProgress.done() })
+      router.beforeEach(() => {
+        NProgress.start()
+      })
+      router.afterEach(() => {
+        NProgress.done()
+      })
     }
   }
-);
+)

@@ -46,7 +46,9 @@ export default defineConfig({
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub'
     }),
-    SVG(),
+    SVG({
+      svgo: false
+    }),
   ],
   build: {},
   ssgOptions: {
