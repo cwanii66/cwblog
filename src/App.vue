@@ -9,7 +9,10 @@ useHead({
 
 <template>
   <Header />
-  <router-view></router-view>
+  <main class="px-7 py-10">
+    <router-view />
+    <Footer />
+  </main>
 </template>
 
 <style scoped>
