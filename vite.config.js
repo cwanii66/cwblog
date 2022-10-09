@@ -31,7 +31,7 @@ export default defineConfig({
       dirs: 'pages',
     }),
     Markdown({
-      // wrapperComponent: 'Blog',
+      wrapperComponent: 'Blog',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItOptions: {
