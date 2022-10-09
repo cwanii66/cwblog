@@ -8,6 +8,8 @@ import routes from '~pages'
 
 import 'uno.css'
 import './styles/main.css'
+import './styles/prose.css'
+import './styles/md.css'
 import '@unocss/reset/tailwind.css'
 
 export const createApp = ViteSSG(
