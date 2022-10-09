@@ -1,12 +1,13 @@
 <template>
   <header class="head z-40">
-    <router-link 
+    <router-link
       class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
       to="/"
       focusable="false"
     >
     <!-- logo -->
-    <span> CW </span>
+      <span v-show="isDark" style="color:ivory"> CW </span>
+      <span v-show="!isDark" style="color:black"> CW </span>
     </router-link>
     <nav class="nav">
       <div class="spacer" />
