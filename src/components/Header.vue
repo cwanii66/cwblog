@@ -12,6 +12,10 @@
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
+        <router-link to="/" title="Home">
+          <span class="lt-md:hidden">About</span>
+          <div i-ic:baseline-home md:hidden />
+        </router-link>
         <router-link to="/blogs" title="Blog">
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
@@ -19,13 +23,11 @@
         <router-link to="/talks" class="lt-md:hidden" title="Talks">
           Talk
         </router-link>
-        <a href="https://twitter.com/hangwan23159725" target="_blank" title="Twitter" class="lt-md:hidden">
-          <feather-twitter />
-        </a>
-        <a href="https://github.com/cwluvani" target="_blank" title="Github" class="lt-md:hidden">
+
+        <a href="https://github.com/cwluvani" target="_blank" title="Github">
           <div i-uil-github-alt />
         </a>
-        <a href="">
+        <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
         <ToggleBackcolor />

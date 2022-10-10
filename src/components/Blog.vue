@@ -42,7 +42,7 @@ const { frontmatter } = defineProps({
 })
 const router = useRouter()
 const route = useRoute()
-const content = ref()
+const content = ref(null)
 
 const base = 'https://chriswong.vercel.app'
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
