@@ -23,8 +23,10 @@
         <router-link to="/talks" class="lt-md:hidden" title="Talks">
           Talk
         </router-link>
-
-        <a href="https://github.com/cwluvani" target="_blank" title="Github">
+        <a href="https://twitter.com/cwanii66" target="_blank" title="Twitter">
+          <feather-twitter />
+        </a>
+        <a href="https://github.com/cwanii66" target="_blank" title="Github">
           <div i-uil-github-alt />
         </a>
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
