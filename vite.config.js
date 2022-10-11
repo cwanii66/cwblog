@@ -1,8 +1,10 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import fs from 'fs-extra'
 import Vue from '@vitejs/plugin-vue'
 import Inspect from 'vite-plugin-inspect'
 import Pages from 'vite-plugin-pages'
+import matter from 'gray-matter'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -29,6 +31,15 @@ export default defineConfig({
     Pages({
       extensions: ['vue', 'md'],
       dirs: 'pages',
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1))
+
+        const md = fs.readFileSync(path, 'utf-8')
+        const data = matter(md)
+        route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+
+        return route
+      },
     }),
     Markdown({
       wrapperComponent: 'Blog',
