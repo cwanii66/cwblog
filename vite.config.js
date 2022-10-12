@@ -15,7 +15,7 @@ import Markdown from 'vite-plugin-vue-markdown'
 import Shiki from 'markdown-it-shiki'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
-import TOC from 'markdown-it-anchor'
+import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
 
 export default defineConfig({
