@@ -24,16 +24,37 @@ const isSameYear = (a, b) => a && b && getYear(a) === getYear(b)
 
 <template>
   <ul>
-    <template>
+    <template v-if="!blogs.length">
       <div py2 op50>
         { nothing here yet... }
       </div>
     </template>
 
-    <template>
-      <div>
-        <span text-8em op10 absolute left--3rem top--2rem font-bold></span>
+    <template v-for="(route, idx) in blogs" :key="route.path">
+      <div v-if="!isSameYear(route.date, blogs[idx - 1]?.date)" relative h20 pointer-events-none>
+        <span text-8em op10 absolute left--3rem top--2rem font-bold> {{ getYear(route.date) }} </span>
       </div>
+      <app-link
+        class="item block font-normal mb-6 mt-2 no-underline"
+        :to="route.path"
+      >
+        <li class="no-underline">
+          <div class="title text-lg leading-1.2em">
+            <span
+              v-if="route.upcoming"
+              align-middle
+              class="text-xs border rounded px-1 pb-0.2 md:ml--19 mr2 bg-lime/10 border-lime text-lime"
+            >upcoming</span>
+            <span align-middle> {{ route.title }} </span>
+            <span />
+          </div>
+          <div class="time opacity-50 text-sm">
+            {{ formatDate(route.Date) }}
+            <span v-if="route.duration" op80>· {{ route.duration }}</span>
+            <span v-if="route.platform" op80>· {{ route.platform }}</span>
+          </div>
+        </li>
+      </app-link>
     </template>
   </ul>
 </template>

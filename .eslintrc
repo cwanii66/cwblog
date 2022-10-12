@@ -3,5 +3,8 @@
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module"
+  },
+  "rules": {
+    "parser": "vue-eslint-parser"
   }
 }

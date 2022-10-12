@@ -9,18 +9,18 @@
         Blog  
       </router-link>
       <router-link 
-        to="/blogs/category"
-        class="!border-none !font-400" 
-        :class="route.path === '/category' ? '' : inactiveStyle"
-      >
-        Category
-      </router-link>
-      <router-link 
         to="/talks" 
         class="!border-none !font-400" 
         :class="route.path === '/talks' ? '' : inactiveStyle"
       >
         Talks  
+      </router-link>
+      <router-link 
+        to="/plays"
+        class="!border-none !font-400" 
+        :class="route.path === '/plays' ? '' : inactiveStyle"
+      >
+        Plays
       </router-link>
     </div>
   </div>

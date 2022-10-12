@@ -19,8 +19,20 @@ import TOC from 'markdown-it-anchor'
 import { slugify } from './scripts/slugify'
 
 export default defineConfig({
+  server: {
+    port: 4000
+  },
   resolve: {
     alias: [{ find: '~/', replacement: `${resolve(__dirname, 'src')}/` }],
+  },
+  optimizeDeps: {
+    include: [
+      'vue',
+      'vue-router',
+      '@vueuse/core',
+      'dayjs',
+      'dayjs/plugin/localizedFormat',
+    ],
   },
   plugins: [
     UnoCSS(),
