@@ -3,7 +3,6 @@ import App from './App.vue'
 import NProgress from 'nprogress'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
-// import routes from '~pages'
 import autoRoutes from 'pages-generated'
 
 import 'uno.css'

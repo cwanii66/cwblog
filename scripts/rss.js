@@ -5,7 +5,7 @@ import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 import { dirname } from 'path'
 
-const DOMAIN = 'https://chriswong.vercel.app'
+const DOMAIN = 'https://chriswong.netlify.app'
 const AUTHOR = {
   name: 'Chris Wong',
   email: 'wh18710455626@gmail.com',
@@ -27,13 +27,13 @@ async function buildBlogRSS() {
   const options = {
     title: 'Chris Wong',
     description: 'Chris Wong\'s Blog',
-    id: 'https://chriswong.vercel.app',
-    link: 'https://chriswong.vercel.app',
+    id: 'https://chriswong.netlify.app',
+    link: 'https://chriswong.netlify.app',
     copyright: 'CC BY-NC-SA 4.0 2022 © Chris Wong',
     feedLinks: {
-      json: 'https://chriswong.vercel.app/feed.json',
-      atom: 'https://chriswong.vercel.app/feed.atom',
-      rss: 'https://chriswong.vercel.app/feed.xml',
+      json: 'https://chriswong.netlify.app/feed.json',
+      atom: 'https://chriswong.netlify.app/feed.atom',
+      rss: 'https://chriswong.netlify.app/feed.xml',
     }
   }
   const posts = (await Promise.all(
@@ -68,8 +68,12 @@ async function writeFeed(name, options, items) {
   options.favicon = ''
 
   const feed = new Feed(options)
-  items.forEach(item => feed.addItem(item))
-
+  items
+  .filter(item => !(item.date.toString() === 'Invalid Date'))
+  .forEach(item => {
+    console.log(item.date)
+    feed.addItem(item)
+  })
   await fs.ensureDir(dirname(`./dist/${name}`))
   await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')
   await fs.writeFile(`./dist/${name}.atom`, feed.atom1(), 'utf-8')
