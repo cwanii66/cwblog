@@ -42,13 +42,14 @@ export default defineConfig({
     }),
     Pages({
       extensions: ['vue', 'md'],
-      dirs: 'pages',
+      dirs: ['pages'],
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
 
         const md = fs.readFileSync(path, 'utf-8')
         const { data } = matter(md)
         route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        console.log(route)
 
         return route
       },

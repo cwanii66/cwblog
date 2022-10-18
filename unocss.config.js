@@ -20,7 +20,7 @@ export default defineConfig({
     presetUno(),
     presetWebFonts({
       fonts: {
-        sans: 'Inter',
+        sans: 'Inter:400,600,800',
         mono: 'DM Mono',
       },
     }),

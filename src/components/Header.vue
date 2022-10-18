@@ -6,8 +6,8 @@
       focusable="false"
     >
     <!-- logo -->
-      <span v-show="isDark" style="color:ivory"> CW </span>
-      <span v-show="!isDark" style="color:black"> CW </span>
+      <span v-show="isDark" style="color:ivory;"> CW </span>
+      <span v-show="!isDark" style="color:black;"> CW </span>
     </router-link>
     <nav class="nav">
       <div class="spacer" />
@@ -19,9 +19,6 @@
         <router-link to="/blogs" title="Blog">
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
-        </router-link>
-        <router-link to="/talks" class="lt-md:hidden" title="Talks">
-          Talk
         </router-link>
         <a href="https://twitter.com/cwanii66" target="_blank" title="Twitter">
           <feather-twitter />
@@ -93,4 +90,5 @@ import { isDark } from '~/utils'
 .nav .right > * {
   margin: auto;
 }
+
 </style>
